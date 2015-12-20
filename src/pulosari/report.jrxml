@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     individu.`id_org` AS individu_id_org,
+     individu.`id_kel` AS individu_id_kel,
+     individu.`nama` AS individu_nama,
+     individu.`hub` AS individu_hub,
+     individu.`jk` AS individu_jk,
+     individu.`tempat` AS individu_tempat,
+     individu.`tgl` AS individu_tgl,
+     individu.`pendidikan` AS individu_pendidikan,
+     individu.`pekerjaan` AS individu_pekerjaan,
+     keluarga.`id_kel` AS keluarga_id_kel,
+     keluarga.`nama_kk` AS keluarga_nama_kk,
+     keluarga.`kampung` AS keluarga_kampung,
+     keluarga.`rt` AS keluarga_rt,
+     keluarga.`rw` AS keluarga_rw,
+     keluarga.`dusun` AS keluarga_dusun,
+     keluarga.`kecamatan` AS keluarga_kecamatan,
+     keluarga.`kabupaten` AS keluarga_kabupaten,
+     keluarga.`provinsi` AS keluarga_provinsi
+FROM
+     `keluarga` keluarga INNER JOIN `individu` individu ON keluarga.`id_kel` = individu.`id_kel`
+WHERE
+individu.id_kel = $P{id}
+order by individu.`id_org`]]>
+	</queryString>
+	<field name="individu_id_org" class="java.lang.Integer"/>
+	<field name="individu_id_kel" class="java.lang.Integer"/>
+	<field name="individu_nama" class="java.lang.String"/>
+	<field name="individu_hub" class="java.lang.String"/>
+	<field name="individu_jk" class="java.lang.String"/>
+	<field name="individu_tempat" class="java.lang.String"/>
+	<field name="individu_tgl" class="java.lang.String"/>
+	<field name="individu_pendidikan" class="java.lang.String"/>
+	<field name="individu_pekerjaan" class="java.lang.String"/>
+	<field name="keluarga_id_kel" class="java.lang.Integer"/>
+	<field name="keluarga_nama_kk" class="java.lang.String"/>
+	<field name="keluarga_kampung" class="java.lang.String"/>
+	<field name="keluarga_rt" class="java.lang.String"/>
+	<field name="keluarga_rw" class="java.lang.String"/>
+	<field name="keluarga_dusun" class="java.lang.String"/>
+	<field name="keluarga_kecamatan" class="java.lang.String"/>
+	<field name="keluarga_kabupaten" class="java.lang.String"/>
+	<field name="keluarga_provinsi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="3" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="209" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="142" width="54" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="162" width="54" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="182" width="54" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="182" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="142" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="162" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KABUPATEN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="108" y="142" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_kampung}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="162" width="18" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="126" y="162" width="19" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="137" y="162" width="49" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="182" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_dusun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="625" y="142" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_kecamatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="626" y="162" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_kabupaten}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="625" y="182" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_provinsi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="147" width="0" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="167" width="0" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="187" width="0" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="142" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="162" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="182" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="75" width="143" height="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU KELUARGA KELURAHAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="85" width="29" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[(K3)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="101" width="127" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Reg No : 2014 -Ds / ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="98" width="18" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="436" y="102" width="23" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="459" y="98" width="14" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rw}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="473" y="102" width="23" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN TASIKMALAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIBALONG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="802" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESA CISEMPUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="53" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat : Jalan Veteran No. 1 Cisempur 46185]]></text>
+			</staticText>
+			<line>
+				<reportElement x="197" y="71" width="434" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Double" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="524" y="6" width="115" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="6" width="221" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEMPAT/ TANGGAL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="6" width="26" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="6" width="66" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS KELAMIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="6" width="122" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="6" width="59" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ HUBUNGAN KELUARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="639" y="6" width="128" height="17"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEKERJAAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="26" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="122" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="59" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_hub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="66" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="108" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="524" y="0" width="115" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pendidikan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="639" y="0" width="128" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pekerjaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="113" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tempat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="180">
+			<staticText>
+				<reportElement x="67" y="21" width="114" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kepala Desa Cisempur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="20" width="154" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kaur Pemerintahan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="84" width="154" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ani Mulyani]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="84" width="156" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maman Suparman M.Si]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="3" width="114" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mengetahui :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="98" width="51" height="13"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Catatan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="111" width="283" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[1. Untuk Pengajuan pembuatan kartu keluarga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="131" width="374" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[2. Untuk pengajuan keterangan tidak mampu]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="12" splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="20"/>
+	</noData>
+</jasperReport>

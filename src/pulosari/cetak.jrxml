@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     keluarga.`id_kel` AS keluarga_id_kel,
+     keluarga.`nama_kk` AS keluarga_nama_kk,
+     keluarga.`kampung` AS keluarga_kampung,
+     keluarga.`rt` AS keluarga_rt,
+     keluarga.`rw` AS keluarga_rw,
+     keluarga.`dusun` AS keluarga_dusun,
+     keluarga.`kecamatan` AS keluarga_kecamatan,
+     keluarga.`kabupaten` AS keluarga_kabupaten,
+     keluarga.`provinsi` AS keluarga_provinsi,
+     individu.`id_org` AS individu_id_org,
+     individu.`id_kel` AS individu_id_kel,
+     individu.`nama` AS individu_nama,
+     individu.`hub` AS individu_hub,
+     individu.`jk` AS individu_jk,
+     individu.`tempat` AS individu_tempat,
+     individu.`tgl` AS individu_tgl,
+     individu.`pendidikan` AS individu_pendidikan,
+     individu.`pekerjaan` AS individu_pekerjaan
+FROM
+     `individu` individu INNER JOIN `keluarga` keluarga ON individu.`id_kel` = keluarga.`id_kel`
+WHERE
+individu.id_kel = $P{id}]]>
+	</queryString>
+	<field name="keluarga_id_kel" class="java.lang.Integer"/>
+	<field name="keluarga_nama_kk" class="java.lang.String"/>
+	<field name="keluarga_kampung" class="java.lang.String"/>
+	<field name="keluarga_rt" class="java.lang.String"/>
+	<field name="keluarga_rw" class="java.lang.String"/>
+	<field name="keluarga_dusun" class="java.lang.String"/>
+	<field name="keluarga_kecamatan" class="java.lang.String"/>
+	<field name="keluarga_kabupaten" class="java.lang.String"/>
+	<field name="keluarga_provinsi" class="java.lang.String"/>
+	<field name="individu_id_org" class="java.lang.Integer"/>
+	<field name="individu_id_kel" class="java.lang.Integer"/>
+	<field name="individu_nama" class="java.lang.String"/>
+	<field name="individu_hub" class="java.lang.String"/>
+	<field name="individu_jk" class="java.lang.String"/>
+	<field name="individu_tempat" class="java.lang.String"/>
+	<field name="individu_tgl" class="java.lang.String"/>
+	<field name="individu_pendidikan" class="java.lang.String"/>
+	<field name="individu_pekerjaan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="619" y="10" width="128" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pekerjaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="10" width="66" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="10" width="113" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tempat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="10" width="59" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_hub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="10" width="115" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pendidikan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="10" width="26" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="10" width="108" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="10" width="122" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

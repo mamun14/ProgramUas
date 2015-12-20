@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     individu.`id_org` AS individu_id_org,
+     individu.`id_kel` AS individu_id_kel,
+     individu.`nama` AS individu_nama,
+     individu.`hub` AS individu_hub,
+     individu.`jk` AS individu_jk,
+     individu.`tempat` AS individu_tempat,
+     individu.`tgl` AS individu_tgl,
+     individu.`pendidikan` AS individu_pendidikan,
+     individu.`pekerjaan` AS individu_pekerjaan,
+     keluarga.`id_kel` AS keluarga_id_kel,
+     keluarga.`nama_kk` AS keluarga_nama_kk,
+     keluarga.`kampung` AS keluarga_kampung,
+     keluarga.`rt` AS keluarga_rt,
+     keluarga.`rw` AS keluarga_rw,
+     keluarga.`dusun` AS keluarga_dusun,
+     keluarga.`kecamatan` AS keluarga_kecamatan,
+     keluarga.`kabupaten` AS keluarga_kabupaten,
+     keluarga.`provinsi` AS keluarga_provinsi
+FROM
+     `keluarga` keluarga INNER JOIN `individu` individu ON keluarga.`id_kel` = individu.`id_kel`]]>
+	</queryString>
+	<field name="individu_id_org" class="java.lang.Integer"/>
+	<field name="individu_id_kel" class="java.lang.Integer"/>
+	<field name="individu_nama" class="java.lang.String"/>
+	<field name="individu_hub" class="java.lang.String"/>
+	<field name="individu_jk" class="java.lang.String"/>
+	<field name="individu_tempat" class="java.lang.String"/>
+	<field name="individu_tgl" class="java.lang.String"/>
+	<field name="individu_pendidikan" class="java.lang.String"/>
+	<field name="individu_pekerjaan" class="java.lang.String"/>
+	<field name="keluarga_id_kel" class="java.lang.Integer"/>
+	<field name="keluarga_nama_kk" class="java.lang.String"/>
+	<field name="keluarga_kampung" class="java.lang.String"/>
+	<field name="keluarga_rt" class="java.lang.String"/>
+	<field name="keluarga_rw" class="java.lang.String"/>
+	<field name="keluarga_dusun" class="java.lang.String"/>
+	<field name="keluarga_kecamatan" class="java.lang.String"/>
+	<field name="keluarga_kabupaten" class="java.lang.String"/>
+	<field name="keluarga_provinsi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="65"/>
+	<subDataset name="Table Dataset 1"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     individu.`id_org` AS individu_id_org,
+     individu.`id_kel` AS individu_id_kel,
+     individu.`nama` AS individu_nama,
+     individu.`hub` AS individu_hub,
+     individu.`jk` AS individu_jk,
+     individu.`tempat` AS individu_tempat,
+     individu.`tgl` AS individu_tgl,
+     individu.`pendidikan` AS individu_pendidikan,
+     individu.`pekerjaan` AS individu_pekerjaan,
+     keluarga.`id_kel` AS keluarga_id_kel,
+     keluarga.`nama_kk` AS keluarga_nama_kk,
+     keluarga.`kampung` AS keluarga_kampung,
+     keluarga.`rt` AS keluarga_rt,
+     keluarga.`rw` AS keluarga_rw,
+     keluarga.`dusun` AS keluarga_dusun,
+     keluarga.`kecamatan` AS keluarga_kecamatan,
+     keluarga.`kabupaten` AS keluarga_kabupaten,
+     keluarga.`provinsi` AS keluarga_provinsi
+FROM
+     `individu` individu,
+     `keluarga` keluarga]]>
+	</queryString>
+	<field name="individu_id_org" class="java.lang.Integer"/>
+	<field name="individu_id_kel" class="java.lang.Integer"/>
+	<field name="individu_nama" class="java.lang.String"/>
+	<field name="individu_hub" class="java.lang.String"/>
+	<field name="individu_jk" class="java.lang.String"/>
+	<field name="individu_tempat" class="java.lang.String"/>
+	<field name="individu_tgl" class="java.lang.String"/>
+	<field name="individu_pendidikan" class="java.lang.String"/>
+	<field name="individu_pekerjaan" class="java.lang.String"/>
+	<field name="keluarga_id_kel" class="java.lang.Integer"/>
+	<field name="keluarga_nama_kk" class="java.lang.String"/>
+	<field name="keluarga_kampung" class="java.lang.String"/>
+	<field name="keluarga_rt" class="java.lang.String"/>
+	<field name="keluarga_rw" class="java.lang.String"/>
+	<field name="keluarga_dusun" class="java.lang.String"/>
+	<field name="keluarga_kecamatan" class="java.lang.String"/>
+	<field name="keluarga_kabupaten" class="java.lang.String"/>
+	<field name="keluarga_provinsi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="270" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN BANDUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN PANGALENGAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="802" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESA PULOSARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="70" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat : Jalan Cinangsih No. 1 Pangalengan 40378]]></text>
+			</staticText>
+			<line>
+				<reportElement x="183" y="90" width="452" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="39" y="0" width="122" height="125"/>
+				<imageExpression><![CDATA["D:\\baru\\Kabupaten Color.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="284" y="102" width="227" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU PERJALANAN KESEHATAN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="121" width="120" height="28"/>
+				<textElement>
+					<font size="22" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(KPK)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="149" width="111" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Reg No : 2014 -Ds / ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="210" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="248" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-466" y="199" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="229" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KABUPATEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-466" y="246" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-466" y="219" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="96" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="143" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="116" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="143" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="116" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="96" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="143" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="116" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="143" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="116" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="96" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="143" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-157" y="116" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="143" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-228" y="116" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="96" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="143" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="116" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="143" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="116" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="96" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="143" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-170" y="116" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="143" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="116" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT/ RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-241" y="96" width="71" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="211" width="64" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KAMPUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="231" width="65" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RT / RW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="250" width="65" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUSUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="231" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="211" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-192" y="94" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-192" y="94" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-192" y="94" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="250" width="9" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="633" y="212" width="10" height="18"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="634" y="229" width="10" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="634" y="248" width="10" height="20"/>
+				<textElement/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="231" width="16" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="211" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_kampung}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="230" width="16" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="250" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_dusun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="642" y="210" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keluarga_kecamatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="643" y="230" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keluarga_kabupaten}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="644" y="248" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keluarga_provinsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="149" width="16" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keluarga_rt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="149" width="16" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keluarga_rw}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="230" width="6" height="20"/>
+				<textElement/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="149" width="6" height="20"/>
+				<textElement/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="149" width="6" height="20"/>
+				<textElement/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="505" y="0" width="115" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="0" width="221" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEMPAT TANGGAL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="0" width="26" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="66" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS KELAMIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="0" width="59" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ HUBUNGAN KELUARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="0" width="128" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEKERJAAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="0" width="122" height="17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="36" y="0" width="123" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="0" width="59" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_hub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="66" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="104" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tempat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="0" width="117" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="0" width="117" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pendidikan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="0" width="128" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{individu_pekerjaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="27" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="181">
+			<staticText>
+				<reportElement x="36" y="21" width="125" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Kepala Desa Pulosari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="107" width="170" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[M. DIDIN BUDIMAN, S.H., S.Sos.I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="2" width="95" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="23" width="146" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Ketua TP PKK Desa Pulosari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="108" width="182" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DR. AYU KURNIA PUTRI, SE., MM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="81" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[CATATAN :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="101" width="319" height="20"/>
+				<textElement/>
+				<text><![CDATA[1. Untuk peminjaman ambulan merah bisa langsung ke puskesmas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="121" width="319" height="20"/>
+				<textElement/>
+				<text><![CDATA[2. Untuk peminjaman mobil operasi  Desa Siaga harus dilampiri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="141" width="143" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kartu Perjalanan Kesehatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="161" width="445" height="20"/>
+				<textElement/>
+				<text><![CDATA[3. Untuk Peminjaman ambulan Desa bisa lewat Desa atau langsung ke penanggung jawab]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="23" splitType="Stretch"/>
+	</summary>
+</jasperReport>
